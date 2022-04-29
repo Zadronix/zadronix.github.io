@@ -12,7 +12,7 @@ var myHeading = document.querySelector('h3');
 
 function setUserName() {
     var myName = prompt('Please enter your name.');
-    var result = myName === '' ? 'Kaktus' : myName;
+    var result = myName ? myName : 'Kaktus';
     localStorage.setItem('name', result);
     myHeading.textContent = 'Let`s breake this silence, ' + result;
 }
