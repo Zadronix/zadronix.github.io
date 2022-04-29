@@ -10,11 +10,13 @@ myImage.onclick = function() {
 }
 var myHeading = document.querySelector('h3');
 
- function setUserName() {
-   var myName = prompt('Please enter your name.');
-   localStorage.setItem('name', myName);
-   myHeading.textContent = 'Let`s breake this silence, ' + myName;
-  }
+function setUserName() {
+    var myName = prompt('Please enter your name.');
+    var result = myName === '' ? 'Kaktus' : myName;
+    localStorage.setItem('name', result);
+    myHeading.textContent = 'Let`s breake this silence, ' + result;
+}
+
   if(!localStorage.getItem('name')) {
   setUserName();
   } 
